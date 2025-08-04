@@ -7,28 +7,67 @@
 
 /* global styles */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap");
 
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #a4c2d1; /* egg blue */
+   font-family: "Poppins", sans-serif;
+   background-color: #a4c2d1; /* egg blue */
 }
 
 h1,
 h2 {
-    font-family: "DM Serif Display", serif;
-    color: #184f63; /* dark-blue */
+   font-family: "DM Serif Display", serif;
+   color: #184f63; /* dark-blue */
 }
 
+/* ABOUT SECTION */
 
-/* HEADER STYLES */
+#about {
+   background-color: white;
+}
 
-/* HERO */
+/* PORTFOLIO SECTION */
+
+#portfolio {
+   background-color: #dbdcde; /* light grey */
+}
+
+#portfolio .card-title { /* using this selector combo gives more control and will only target card-title in #portfolio, in case we add more cards in other sections */
+   color: #1f7798; /* mid blue */
+   font-size: 1.2rem; /* slighlt smaller than h3 */
+}
+
+#portfolio .btn-outline-secondary:hover { /* can also use btn class instead of btn-outline-secondary but latter is more specific */
+   background-color: #1f7798; /* mid blue */
+}
+
+#portfolio .card-text { /* each text block will appear min 120px regardless of amount of text it holds ~ evens out the cards */
+   min-height: 120px;
+}
+
+/* CONTACT SECTION */
+
+#contact {
+   background-color: white;
+}
+
+/* HEADER */
+
 #hero {
-    background-color: #dbdcde; /* light grey  ~ fallback if image doesn't load */
-    background-image: url("../images/background.webp");
-    background-size: cover;
-    background-position: 50% 70%;
-    min-height: 500px;
-    padding: 5% 7%; /* padding top bottom 5%, left right 7% */
+   background-color: #dbdcde; /* light grey ~ fallback for image */
+   background-image: url("../images/background.webp");
+   background-size: cover;
+   background-position: 50% 70%;
+   min-height: 500px;
+   padding: 5% 7%;
+}
+
+/* MEDIA QUERIES */
+
+/* Use Bootstrap breakpoint for XL screens ~ 1200px */
+@media screen and (min-width: 1200px) {
+   /* Fixes all portfolio cards being too tall on xl screens */
+   #portfolio .card-text {
+      min-height: auto;
+   }
 }
