@@ -1,0 +1,34 @@
+/*  
+    #a4c2d1; egg blue
+    #dbdcde; light grey
+    #1f7798; mid-blue
+    #184f63; dark-blue
+*/
+
+/* global styles */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #a4c2d1; /* egg blue */
+}
+
+h1,
+h2 {
+    font-family: "DM Serif Display", serif;
+    color: #184f63; /* dark-blue */
+}
+
+
+/* HEADER STYLES */
+
+/* HERO */
+#hero {
+    background-color: #dbdcde; /* light grey  ~ fallback if image doesn't load */
+    background-image: url("../images/background.webp");
+    background-size: cover;
+    background-position: 50% 70%;
+    min-height: 500px;
+    padding: 5% 7%; /* padding top bottom 5%, left right 7% */
+}
